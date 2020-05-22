@@ -44,7 +44,7 @@ app.post('/www.fio.cz/ib_api/rest/import/', upload.single('file'), (req, res) =>
         },
         (error, response, body) => {
             if (error || response.statusCode !== 200) {
-                console.log(response)
+                // console.log(response)
                 return res.status(response.statusCode).json({ type: 'error', message: error && error.message ? error.message : '' });
             }
             res.send(body);
